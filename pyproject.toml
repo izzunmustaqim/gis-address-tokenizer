@@ -1,0 +1,17 @@
+[project]
+name = "address-tokenizer"
+version = "0.1.0"
+description = "Parses free-form address strings into structured JSON components"
+requires-python = ">=3.10"
+# stdlib only — no runtime dependencies
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# E/W pyflakes+style, I import sorting, UP pyupgrade, B bugbear
+select = ["E", "F", "I", "UP", "B"]
