@@ -49,8 +49,8 @@ STATES = frozenset(
     }
 )
 
-# Street prefixes (spec.md §3 row 6). The first three carry a required
-# trailing space; "Persiaran" needs any content after it.
+# Street prefixes (assignment spec): the first three include a required
+# trailing space; "Persiaran" is a bare prefix with no space requirement.
 _WORD_STREET_PREFIXES = ("Jalan ", "Jln ", "Lorong ")
 
 _APT_RE = re.compile(r"No \d+")
@@ -93,14 +93,12 @@ class AptRule(_FieldRule):
 
 
 class StreetRule(_FieldRule):
-    """Begins with `Jalan `, `Jln `, `Lorong `, or `Persiaran` + content."""
+    """Begins with `Jalan `, `Jln `, `Lorong `, or `Persiaran`."""
 
     name: ClassVar[str] = "street"
 
     def matches(self, token: str) -> bool:
-        if token.startswith("Persiaran"):
-            return len(token) > len("Persiaran")  # needs content after prefix
-        return token.startswith(_WORD_STREET_PREFIXES)
+        return token.startswith((*_WORD_STREET_PREFIXES, "Persiaran"))
 
 
 class PostcodeRule(_FieldRule):
