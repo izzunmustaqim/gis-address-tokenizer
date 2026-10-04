@@ -34,17 +34,17 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
 
 ## Phase 3 — Rules
 
-- [ ] Define `ComponentRule` ABC (`name`, `matches`, `apply`).
-- [ ] Add `CITIES` / `STATES` frozenset constants (full lists from spec §3.1–3.2).
-- [ ] `AptRule` — `No \d+` fullmatch; rejects `No`, `No ABC`, `no 11` (case).
-- [ ] `StreetRule` — prefixes `Jalan `, `Jln `, `Lorong `, `Persiaran`;
+- [x] Define `ComponentRule` ABC (`name`, `matches`, `apply`).
+- [x] Add `CITIES` / `STATES` frozenset constants (full lists from spec §3.1–3.2).
+- [x] `AptRule` — `No \d+` fullmatch; rejects `No`, `No ABC`, `no 11` (case).
+- [x] `StreetRule` — prefixes `Jalan `, `Jln `, `Lorong `, `Persiaran`;
       rejects `Jalan` with no trailing space/content.
-- [ ] `PostcodeRule` — 5 digits AND inclusive `01000`–`98859`;
+- [x] `PostcodeRule` — 5 digits AND inclusive `01000`–`98859`;
       rejects `00999`, `98860`, `2108`, `210800`, non-numeric.
-- [ ] `CityRule` / `StateRule` — exact set membership;
+- [x] `CityRule` / `StateRule` — exact set membership;
       rejects unknown names and partial matches (`Kuala` alone).
-- [ ] `SectionRule` — always matches.
-- [ ] Table-driven unit tests per rule: accepts, rejects, boundary values.
+- [x] `SectionRule` — always matches.
+- [x] Table-driven unit tests per rule: accepts, rejects, boundary values.
 
 ## Phase 4 — Tokenizer Core (comma path)
 
