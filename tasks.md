@@ -48,28 +48,28 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
 
 ## Phase 4 — Tokenizer Core (comma path)
 
-- [ ] `AddressTokenizer.__init__` with injectable rule list; default order
+- [x] `AddressTokenizer.__init__` with injectable rule list; default order
       `apt, street, postcode, city, state, section`.
-- [ ] `_split` comma path: split, strip, drop empty tokens.
-- [ ] `_consume`: first matching rule wins; return updated `Address`.
-- [ ] `tokenize(raw)`: normalize input (strip, collapse whitespace, drop
+- [x] `_split` comma path: split, strip, drop empty tokens.
+- [x] `_consume`: first matching rule wins; return updated `Address`.
+- [x] `tokenize(raw)`: normalize input (strip, collapse whitespace, drop
       trailing punctuation).
-- [ ] Integration tests:
-  - [ ] Spec example 1 (full address) matches expected JSON exactly.
-  - [ ] Spec example 2 (incomplete address) matches expected JSON exactly.
-  - [ ] Order permutation: state/city first, apt last.
-  - [ ] Single-component inputs (one field each).
-  - [ ] Empty / whitespace input -> `{}` without raising.
+- [x] Integration tests:
+  - [x] Spec example 1 (full address) matches expected JSON exactly.
+  - [x] Spec example 2 (incomplete address) matches expected JSON exactly.
+  - [x] Order permutation: state/city first, apt last.
+  - [x] Single-component inputs (one field each).
+  - [x] Empty / whitespace input -> `{}` without raising.
 
 ## Phase 5 — Comma-Free Parsing (bonus)
 
-- [ ] Detect absence of commas and switch to the regex-scan strategy.
-- [ ] Build `TOKEN_RE` with named groups: apt, street, postcode, city, state.
+- [x] Detect absence of commas and switch to the regex-scan strategy.
+- [x] Build `TOKEN_RE` with named groups: apt, street, postcode, city, state.
       City/state alternations sorted longest-first.
-- [ ] Extract residue spans between matches as section tokens; discard
+- [x] Extract residue spans between matches as section tokens; discard
       whitespace/punctuation-only spans.
-- [ ] Ensure embedded pairs parse: `21080 Kuala Terengganu` -> postcode + city.
-- [ ] Tests: comma-free versions of both spec examples; mixed comma/no-comma
+- [x] Ensure embedded pairs parse: `21080 Kuala Terengganu` -> postcode + city.
+- [x] Tests: comma-free versions of both spec examples; mixed comma/no-comma
       input; trailing-period input.
 
 ## Phase 6 — Console App

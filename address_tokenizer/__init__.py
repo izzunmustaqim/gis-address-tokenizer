@@ -6,7 +6,6 @@ Public exports (populated as implementation lands, see design.md §2):
 """
 
 from .model import Address
+from .tokenizer import AddressTokenizer
 
-# from .tokenizer import AddressTokenizer
-
-__all__ = ["Address"]
+__all__ = ["Address", "AddressTokenizer"]
