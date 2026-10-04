@@ -21,8 +21,9 @@ A university assignment (AM GIS Application): a console program written in **Pyt
 
 ## Commands
 
-Tooling: `pytest` for tests (installed). Linting (`ruff`) not yet configured — prefer zero-config choices when adding it.
+Tooling configured in `pyproject.toml`: `pytest` (testpaths=tests) and `ruff` (line length 100, rules E/F/I/UP/B).
 
 - Run the app: `python main.py`
 - Run all tests: `python -m pytest`
 - Single test: `python -m pytest tests/test_tokenizer.py::test_name`
+- Lint: `python -m ruff check .`
