@@ -17,10 +17,10 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
 
 ## Phase 1 — Skeleton
 
-- [ ] Create package layout: `address_tokenizer/` with `__init__.py`, empty
+- [x] Create package layout: `address_tokenizer/` with `__init__.py`, empty
       `model.py`, `rules.py`, `tokenizer.py`, `app.py`; `tests/` package.
-- [ ] Add `main.py` entry point stub.
-- [ ] Verify test runner works: `python -m pytest` collects 0 tests cleanly.
+- [x] Add `main.py` entry point stub.
+- [x] Verify test runner works: `python -m pytest` collects 0 tests cleanly.
 
 ## Phase 2 — Domain Model
 

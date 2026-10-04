@@ -21,7 +21,8 @@ A university assignment (AM GIS Application): a console program written in **Pyt
 
 ## Commands
 
-No build, lint, or test tooling is set up yet. When adding tooling, prefer the standard library and zero-config choices (`unittest` or `pytest` for tests, `ruff` for linting) and document the commands here.
+Tooling: `pytest` for tests (installed). Linting (`ruff`) not yet configured — prefer zero-config choices when adding it.
 
-Placeholder (replace once the project layout exists):
-- Run tests: `python -m pytest` (single test: `python -m pytest path/to/test_file.py::test_name`)
+- Run the app: `python main.py`
+- Run all tests: `python -m pytest`
+- Single test: `python -m pytest tests/test_tokenizer.py::test_name`
