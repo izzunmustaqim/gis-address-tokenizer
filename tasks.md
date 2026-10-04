@@ -74,14 +74,14 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
 
 ## Phase 6 — Console App
 
-- [ ] `ConsoleApp.run()` loop: prompt, read line, tokenize, print JSON,
+- [x] `ConsoleApp.run()` loop: prompt, read line, tokenize, print JSON,
       repeat.
-- [ ] Exit paths: `exit`/`quit` command, EOF (Ctrl-D / pipe end), Ctrl-C.
-- [ ] Per-iteration `except Exception` — print message, continue loop;
+- [x] Exit paths: `exit`/`quit` command, EOF (Ctrl-D / pipe end), Ctrl-C.
+- [x] Per-iteration `except Exception` — print message, continue loop;
       no bare `except:`.
-- [ ] Injected `input_fn` / `output_fn` for testability; return exit codes
+- [x] Injected `input_fn` / `output_fn` for testability; return exit codes
       (0 normal, 130 on interrupt).
-- [ ] App tests: scripted input sequence, assert JSON output lines parse;
+- [x] App tests: scripted input sequence, assert JSON output lines parse;
       a raising line does not terminate the loop.
 
 ## Phase 7 — Polish & Verification
