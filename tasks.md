@@ -24,12 +24,12 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done
 
 ## Phase 2 — Domain Model
 
-- [ ] Implement `Address` frozen dataclass with six optional `str | None` fields.
-- [ ] Implement `Address.with_field(name, value)` via `dataclasses.replace`,
+- [x] Implement `Address` frozen dataclass with six optional `str | None` fields.
+- [x] Implement `Address.with_field(name, value)` via `dataclasses.replace`,
       raising `KeyError`/`ValueError` for unknown field names.
-- [ ] Implement `to_dict()` — canonical key order, `None`s omitted.
-- [ ] Implement `to_json()` using the `json` module.
-- [ ] Unit tests: empty address -> `{}`; partial address omits absent keys;
+- [x] Implement `to_dict()` — canonical key order, `None`s omitted.
+- [x] Implement `to_json()` using the `json` module.
+- [x] Unit tests: empty address -> `{}`; partial address omits absent keys;
       postcode keeps leading zeros (`"01000"`).
 
 ## Phase 3 — Rules

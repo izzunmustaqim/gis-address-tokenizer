@@ -5,7 +5,8 @@ Public exports (populated as implementation lands, see design.md §2):
     AddressTokenizer — orchestrator
 """
 
-# from .model import Address
+from .model import Address
+
 # from .tokenizer import AddressTokenizer
 
-__all__: list[str] = []
+__all__ = ["Address"]
